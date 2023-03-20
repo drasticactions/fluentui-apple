@@ -242,12 +242,24 @@ open class Button: UIButton, TokenizedControlInternal {
 
         if needsSetImage || !highlightedColor.isEqual(highlightedImageTintColor) {
             highlightedImageTintColor = highlightedColor
-            setImage(image?.withTintColor(highlightedColor, renderingMode: .alwaysOriginal), for: .highlighted)
+            // Mac Catalyst with the Mac Idiom only supports UIControlStateNormal
+            // Use normal for it, and highlighed for the rest.
+            if UIDevice.current.userInterfaceIdiom == .mac {
+                setImage(image?.withTintColor(highlightedColor, renderingMode: .alwaysOriginal), for: .normal)
+            } else {
+                setImage(image?.withTintColor(highlightedColor, renderingMode: .alwaysOriginal), for: .highlighted)
+            }
         }
 
         if needsSetImage || !disabledColor.isEqual(disabledImageTintColor) {
             disabledImageTintColor = disabledColor
-            setImage(image?.withTintColor(disabledColor, renderingMode: .alwaysOriginal), for: .disabled)
+            // Mac Catalyst with the Mac Idiom only supports UIControlStateNormal
+            // Use normal for it, and disabled for the rest.
+            if UIDevice.current.userInterfaceIdiom == .mac {
+                setImage(image?.withTintColor(disabledColor, renderingMode: .alwaysOriginal), for: .normal)
+            } else {
+                setImage(image?.withTintColor(disabledColor, renderingMode: .alwaysOriginal), for: .disabled)
+            }
         }
 
         if needsSetImage {
