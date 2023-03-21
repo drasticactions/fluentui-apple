@@ -447,7 +447,7 @@
 		1168630322E131CF0088B302 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		118D9847230BBA2300BC0B72 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		2A9745DD281733D700E1A1FD /* TableViewCellTokenSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTokenSet.swift; sourceTree = "<group>"; };
-		3AE8F04229C878EB00B31332 /* DrasticFluentUIFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrasticFluentUIFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE8F04229C878EB00B31332 /* FluentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FluentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE8F04429C878EB00B31332 /* FluentUIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FluentUIFramework.h; sourceTree = "<group>"; };
 		43488C44270FAD0200124C71 /* FluentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluentNotification.swift; sourceTree = "<group>"; };
 		497DC2D724185885008D86F8 /* PillButtonBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillButtonBar.swift; sourceTree = "<group>"; };
@@ -1082,7 +1082,7 @@
 				A5CEC15A20D980B30016922A /* FluentUITests.xctest */,
 				A5DA88FC226FAA01000A8EA8 /* FluentUIResources-ios.bundle */,
 				8FD01166228A820600D25925 /* libFluentUI.a */,
-				3AE8F04229C878EB00B31332 /* DrasticFluentUIFramework.framework */,
+				3AE8F04229C878EB00B31332 /* FluentUI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1486,9 +1486,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3AE8F04129C878EB00B31332 /* DrasticFluentUIFramework */ = {
+		3AE8F04129C878EB00B31332 /* FluentUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AE8F04929C878EB00B31332 /* Build configuration list for PBXNativeTarget "DrasticFluentUIFramework" */;
+			buildConfigurationList = 3AE8F04929C878EB00B31332 /* Build configuration list for PBXNativeTarget "FluentUI" */;
 			buildPhases = (
 				3AE8F03D29C878EB00B31332 /* Headers */,
 				3AE8F03E29C878EB00B31332 /* Sources */,
@@ -1500,9 +1500,9 @@
 			dependencies = (
 				3AE8F04B29C8791E00B31332 /* PBXTargetDependency */,
 			);
-			name = DrasticFluentUIFramework;
+			name = FluentUI;
 			productName = FluentUIFramework;
-			productReference = 3AE8F04229C878EB00B31332 /* DrasticFluentUIFramework.framework */;
+			productReference = 3AE8F04229C878EB00B31332 /* FluentUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8FD01165228A820600D25925 /* FluentUILib */ = {
@@ -1633,7 +1633,7 @@
 				A5DA88FB226FAA01000A8EA8 /* FluentUIResources */,
 				8FD01165228A820600D25925 /* FluentUILib */,
 				A5CEC15920D980B30016922A /* FluentUITests */,
-				3AE8F04129C878EB00B31332 /* DrasticFluentUIFramework */,
+				3AE8F04129C878EB00B31332 /* FluentUI */,
 			);
 		};
 /* End PBXProject section */
@@ -2294,11 +2294,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2370,11 +2374,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2447,11 +2455,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2548,7 +2560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3AE8F04929C878EB00B31332 /* Build configuration list for PBXNativeTarget "DrasticFluentUIFramework" */ = {
+		3AE8F04929C878EB00B31332 /* Build configuration list for PBXNativeTarget "FluentUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3AE8F04629C878EB00B31332 /* Debug */,
